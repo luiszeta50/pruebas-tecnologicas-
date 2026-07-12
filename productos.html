@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bavaria S.A. - Productos</title>
+   <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+    <!-- Barra de Navegación Lateral -->
+    <nav class="sidebar">
+        <div class="sidebar-brand">BAVARIA S.A.</div>
+        <ul class="sidebar-menu">
+              <li><a href="login.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="inventario.html">Inventario</a></li>
+          <li><a href="pedidos.html">Pedidos</a></li>
+          <li><a href="clientes.html">Clientes</a></li>
+          <li><a href="facturacion.html">Facturación</a></li>
+          <li><a href="reportes.html">Reportes</a></li>
+          <li><a href="index.html">Cerrar sesion</a></li>
+        </ul>
+    </nav>
+
+    <!-- Panel de Contenido Derecho -->
+    <main class="main-content">
+        <header class="topbar">
+            <div><strong>Sistema de Gestión</strong></div>
+            <div>Administrador 👤</div>
+        </header>
+
+        <section class="module-container">
+            <div class="module-header">
+                <h1 class="module-title">Productos</h1>
+            </div>
+
+            <!-- Buscador y Control Superior -->
+            <div class="toolbar">
+                <div class="search-box">
+                    <input type="text" placeholder="Buscar producto...">
+                    <button class="btn-search">Buscar</button>
+                </div>
+                <button class="btn-add">+ Agregar producto</button>
+            </div>
+
+            <!-- Tabla de Datos -->
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Producto</th>
+                            <th>Categoría</th>
+                            <th>Precio</th>
+                            <th>Stock</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>P001</td>
+                            <td>Club Colombia Dorada</td>
+                            <td>Cerveza</td>
+                            <td>$ 3.200</td>
+                            <td>120</td>
+                            <td class="action-buttons">
+                                <button class="btn-action btn-edit">✏️</button>
+                                <button class="btn-action btn-delete">🗑️</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>P002</td>
+                            <td>Águila Original</td>
+                            <td>Cerveza</td>
+                            <td>$ 2.800</td>
+                            <td>80</td>
+                            <td class="action-buttons">
+                                <button class="btn-action btn-edit">✏️</button>
+                                <button class="btn-action btn-delete">🗑️</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>P003</td>
+                            <td>Águila Light</td>
+                            <td>Cerveza</td>
+                            <td>$ 2.700</td>
+                            <td>60</td>
+                            <td class="action-buttons">
+                                <button class="btn-action btn-edit">✏️</button>
+                                <button class="btn-action btn-delete">🗑️</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>P004</td>
+                            <td>Póker</td>
+                            <td>Cerveza</td>
+                            <td>$ 2.500</td>
+                            <td>50</td>
+                            <td class="action-buttons">
+                                <button class="btn-action btn-edit">✏️</button>
+                                <button class="btn-action btn-delete">🗑️</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>P005</td>
+                            <td>Costeña</td>
+                            <td>Cerveza</td>
+                            <td>$ 2.400</td>
+                            <td>70</td>
+                            <td class="action-buttons">
+                                <button class="btn-action btn-edit">✏️</button>
+                                <button class="btn-action btn-delete">🗑️</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- Paginación -->
+                <div class="pagination">
+                    <button disabled>Anterior</button>
+                    <button class="active">1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button>4</button>
+                    <button>Siguiente</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

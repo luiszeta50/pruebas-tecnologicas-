@@ -1,0 +1,604 @@
+/* ----------------------------------------------------
+   ESTILOS GENERALES Y CONFIGURACIÓN BASE
+------------------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    background-color: #f4f6f9;
+    height: 100vh;
+    overflow: hidden;
+
+    
+}
+
+
+
+/* ----------------------------------------------------
+   BARRA LATERAL DE NAVEGACIÓN (SIDEBAR)
+------------------------------------------------------- */
+.sidebar {
+    width: 250px;
+    background-color: #183863;
+    color: rgb(251, 246, 246);
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    flex-shrink: 0;
+}
+
+.sidebar-brand {
+    padding: 0 20px 20px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-bottom: 1px solid #628bb7;
+    letter-spacing: 1px;
+}
+
+.sidebar-menu {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.sidebar-menu li a {
+    display: block;
+    padding: 12px 20px;
+    color: #a3b8cc;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.sidebar-menu li a:hover {
+    background-color: rgba(109, 35, 35, 0.05);
+    color: white;
+}
+
+.sidebar-menu li a.active {
+    background-color: #ffbc00;
+    color: #d9dde3;
+    font-weight: bold;
+}
+
+/* ----------------------------------------------------
+   ÁREA DE CONTENIDO PRINCIPAL Y BARRA SUPERIOR
+------------------------------------------------------- */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.topbar {
+    background-color: rgb(230, 223, 223);
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    flex-shrink: 0;
+}
+
+.module-container {
+    padding: 30px;
+}
+
+.module-title {
+    font-size: 1.8rem;
+    color: #e7d8d8;
+    margin-bottom: 25px;
+}
+
+/* ----------------------------------------------------
+   PANELES, BUSCADORES Y HERRAMIENTAS
+------------------------------------------------------- */
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 15px 20px;
+    border-radius: 8px 8px 0 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+/* Especial para la pestaña de inventario */
+.toolbar.inventory-variant {
+    align-items: flex-end;
+    padding-bottom: 0;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+}
+
+.search-box input {
+    padding: 8px 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    width: 250px;
+    outline: none;
+}
+
+/* Botones del Sistema */
+.btn-search {
+    padding: 8px 20px;
+    background-color: #d2dbe6;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.btn-add, .btn-action-main, .btn-invoice-action, .btn-generate {
+    padding: 8px 15px;
+    background-color: #ffbc00;
+    color: #adb7c3;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-invoice-action, .btn-generate {
+    padding: 10px 20px;
+    white-space: nowrap;
+}
+
+/* ----------------------------------------------------
+   ESTILOS DE TABLAS DE DATOS
+------------------------------------------------------- */
+.table-container {
+    background-color: white;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 6px -1px rgba(217, 208, 208, 0.05);
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+th {
+    background-color: #f8fafc;
+    color: #cbd3df;
+    padding: 14px 20px;
+    font-weight: 600;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+td {
+    padding: 14px 20px;
+    border-bottom: 1px solid #e2e8f0;
+    color: #ccd3de;
+}
+
+tr:hover {
+    background-color: #f8fafc;
+}
+
+/* Acciones dentro de las tablas */
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-action, .btn-view, .btn-delete {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.btn-edit { color: #3b82f6; }
+.btn-delete { color: #ef4444; }
+.btn-view { color: #64748b; }
+
+/* Paginación */
+.pagination {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 5px;
+    padding: 15px 20px;
+    background-color: white;
+    border-top: 1px solid #3b82f6;
+    border-radius: 0 0 8px 8px;
+}
+
+.pagination button {
+    padding: 6px 12px;
+    border: 1px solid #3b82f6;
+    background-color: white;
+    color: #3b82f6;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.pagination button.active {
+    background-color: #3b82f6;
+    color: rgb(219, 224, 228);
+    border-color: #3b82f6;
+}
+
+.pagination button:disabled {
+    background-color: #f1f5f9;
+    color: #3b82f6;
+    cursor: not-allowed;
+}
+
+/* ----------------------------------------------------
+   ESTILOS ESPECÍFICOS DE MÓDULOS
+------------------------------------------------------- */
+
+/* Pantalla 4: Pestañas de Inventario */
+.inventory-tabs {
+    display: flex;
+    gap: 10px;
+}
+
+.tab-btn {
+    padding: 10px 20px;
+    border: 1px solid #cbd5e1;
+    border-bottom: none;
+    background-color:  #00c3ff;
+    color: #0f1011;
+    cursor: pointer;
+    border-radius: 6px 6px 0 0;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.tab-btn.active {
+    background-color:  #00c3ff;
+    color: #010812;
+    border-color:  #00c3ff;
+    font-weight: bold;
+}
+
+/* Pantalla 5: Estados de Pedidos */
+.status-badge {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.status-pending { background-color: #fef3c7; color: #d97706; }
+.status-delivered { background-color: #dcfce7; color: #15803d; }
+
+/* Pantalla 7: Formularios de Facturación / Reportes */
+.invoice-panel, .filter-panel {
+    background-color: white;
+    border-radius: 8px 8px 0 0;
+    padding: 25px 20px;
+    box-shadow: 0 2px 5px rgba(6, 0, 0, 0.02);
+}
+
+.invoice-controls-row, .filter-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+/* Diseño final para el botón "+ Nueva factura" en azul celeste */
+.btn-invoice-action {
+    background-color: #00c3ff !important; /* Fondo azul celeste brillante */
+    color: #ffffff !important;            /* Texto blanco nítido */
+    font-weight: bold !important;         /* Texto grueso y legible */
+    border: none !important;              /* Sin bordes extraños */
+    padding: 10px 20px !important;        /* Espaciado interno ideal */
+    border-radius: 6px !important;        /* Esquinas suavizadas del botón */
+    cursor: pointer !important;           /* Cambia el cursor al pasar el mouse */
+}
+
+.form-group-triple, .filter-inputs {
+    display: flex;
+    gap: 20px;
+    flex: 1;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-field.wide, .form-field.select-type { flex: 2; }
+.form-field.medium, .form-field.date-input { flex: 1.2; }
+.form-field.short { flex: 1; }
+
+.form-field label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #e9ecf1;
+}
+
+.form-field select, .form-field input {
+    padding: 9px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    color: #334155;
+    outline: none;
+    background-color: white;
+}
+
+.form-field input[readonly] {
+    background-color: #f1f5f9;
+    font-weight: bold;
+}
+
+/* Pie de factura (Total a pagar) */
+.invoice-footer, .export-footer {
+    background-color: white;
+    padding: 20px;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+    display: flex;
+    justify-content: flex-end;
+}
+
+.total-box {
+    background-color:  #00c3ff;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 15px 35px;
+    border-radius: 6px;
+    font-size: 1.1rem;
+}
+
+.total-box span {
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+
+
+/* Pantalla 8: Gráficos de Reportes */
+.chart-section {
+    background-color: white;
+    padding: 25px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.chart-title {
+    font-size: 1.1rem;
+    color: #334155;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.chart-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 220px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #cbd5e1;
+    margin-bottom: 10px;
+}
+
+.chart-bar-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.chart-bar {
+    width: 45px;
+    background: linear-gradient(to top, #fbeb05, #8ad110);
+    border-radius: 4px 4px 0 0;
+    position: relative;
+}
+
+.chart-bar::before {
+    content: attr(data-value);
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #475569;
+}
+
+.chart-label {
+    margin-top: 8px;
+    font-size: 0.8rem;
+    color: #64748b;
+}
+
+.export-footer { gap: 12px; }
+.btn-export {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    cursor: pointer;
+    color: white;
+}
+.btn-pdf { background-color: #ef4444; }
+.btn-excel { background-color: #22c55e; }
+
+/* ==========================
+   TEMA FUTURISTA BAVARIA
+========================== */
+
+body{
+    background:
+    linear-gradient(
+        135deg,
+        #58718b,
+        #0b2240,
+        #132f54
+    );
+}
+
+
+
+/* Glassmorphism */
+
+.card,
+.table-container,
+.invoice-panel,
+.filter-panel,
+.data-panel,
+.module-container{
+
+    background: rgba(226, 223, 223, 0.08);
+
+    backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(237, 231, 231, 0.15);
+
+    box-shadow:
+    0 0 15px rgba(228, 237, 237, 0.2);
+
+}
+
+/* Efecto Neon */
+
+.sidebar{
+
+    box-shadow:
+    0 0 20px #00eaff;
+
+}
+
+.sidebar-menu li a:hover{
+
+    background: #00eaff;
+
+    color: #4071a5;
+
+    box-shadow:
+    0 0 20px #00eaff;
+
+}
+
+/* Botones Futuristas */
+
+.btn-add,
+.btn-search,
+.btn-action-main,
+.btn-generate{
+
+    background:
+    linear-gradient(
+        45deg,
+        #00eaff,
+        #00b8ff
+    );
+
+    color:white;
+
+    border:none;
+
+    transition:.3s;
+}
+
+.btn-add:hover,
+.btn-search:hover,
+.btn-action-main:hover,
+.btn-generate:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 0 20px #00eaff,
+    0 0 40px #00eaff;
+
+}
+
+/* Tablas */
+
+table{
+
+    color:white;
+
+}
+
+th{
+
+    background:#00b8ff;
+
+    color:white;
+
+}
+
+tr:hover{
+
+    background:
+    rgba(228, 234, 234, 0.1);
+
+}
+
+/* Titulos */
+
+.module-title,
+.dashboard-title{
+
+    color:#00eaff;
+
+    text-shadow:
+    0 0 10px #00eaff,
+    0 0 20px #00eaff;
+
+}
+
+/* Toast */
+
+#toast{
+
+    position:fixed;
+
+    top:20px;
+
+    right:20px;
+
+    background:#00eaff;
+
+    color:#e3e8ed;
+
+    padding:15px 25px;
+
+    border-radius:8px;
+
+    font-weight:bold;
+
+    opacity:0;
+
+    transform:translateY(-20px);
+
+    transition:.4s;
+
+    z-index:9999;
+
+}
+
+#toast.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+

@@ -1,0 +1,95 @@
+// Animación de contadores Dashboard
+
+const counters = document.querySelectorAll('.card-value');
+
+counters.forEach(counter => {
+    const target = parseInt(counter.innerText.replace(/\D/g, ''));
+
+    if (!isNaN(target)) {
+        let count = 0;
+        const speed = target / 30; 
+
+
+        const updateCounter = () => {
+            count += speed;
+
+            if (count < target) {
+                counter.innerText = Math.floor(count);
+                requestAnimationFrame(updateCounter);
+            } else {
+                counter.innerText = target.toLocaleString();
+            }
+        };
+
+        updateCounter();
+    }
+});
+
+const searchInputs = document.querySelectorAll(".search-box input");
+
+searchInputs.forEach(input => {
+
+    input.addEventListener("keyup", function () {
+
+        const filter = this.value.toLowerCase();
+
+        const rows = document.querySelectorAll("tbody tr");
+
+        rows.forEach(row => {
+
+            const text = row.textContent.toLowerCase();
+
+            row.style.display =
+                text.includes(filter)
+                ? ""
+                : "none";
+        });
+
+    });
+
+});
+
+document.querySelectorAll(".btn-delete").forEach(button => {
+
+    button.addEventListener("click", function () {
+
+        const confirmDelete = confirm(
+            "¿Desea eliminar este registro?"
+        );
+
+        if(confirmDelete){
+
+            this.closest("tr").remove();
+
+            alert("Registro eliminado correctamente");
+
+        }
+
+    });
+
+});
+
+function showToast(message){
+
+    const toast = document.getElementById("toast");
+
+    if(!toast) return;
+
+    toast.innerText = message;
+
+    toast.classList.add("show");
+
+    setTimeout(() => {
+
+        toast.classList.remove("show");
+
+    },3000);
+
+}
+
+// Mensaje de bienvenida
+window.addEventListener("load", () => {
+
+    showToast("Bienvenido al Sistema Bavaria");
+
+});

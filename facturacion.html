@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bavaria S.A. - Facturación</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+    <!-- Menú de Navegación Lateral -->
+    <nav class="sidebar">
+        <div class="sidebar-brand">BAVARIA S.A.</div>
+        <ul class="sidebar-menu">
+              <li><a href="login.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="inventario.html">Inventario</a></li>
+          <li><a href="pedidos.html">Pedidos</a></li>
+          <li><a href="clientes.html">Clientes</a></li>
+          <li><a href="facturacion.html">Facturación</a></li>
+          <li><a href="reportes.html">Reportes</a></li>
+          <li><a href="index.html">Cerrar sesion</a></li>
+        </ul>
+    </nav>
+
+    <!-- Área de Trabajo de la Interfaz -->
+    <main class="main-content">
+        <header class="topbar">
+            <div><strong>Sistema de Gestión</strong></div>
+            <div>Administrador 👤</div>
+        </header>
+
+        <section class="module-container">
+            <h1 class="module-title">Facturación</h1>
+
+            <!-- Formulario de Encabezado -->
+            <div class="invoice-panel">
+                <div class="invoice-controls-row">
+                    <div class="form-group-triple">
+                        <div class="form-field wide">
+                            <label>Cliente</label>
+                            <select>
+                                <option>Supermercado La 14</option>
+                                <option>Tiendas D1</option>
+                                <option>Éxito S.A.</option>
+                            </select>
+                        </div>
+                        <div class="form-field medium">
+                            <label>Fecha</label>
+                            <input type="date" value="2026-05-20">
+                        </div>
+                        <div class="form-field short">
+                            <label>No. Factura</label>
+                            <input type="text" value="FAC-000123" readonly>
+                        </div>
+                    </div>
+                    <button class="btn-invoice-action">+ Nueva factura</button>
+                </div>
+            </div>
+
+            <!-- Tabla de Desglose de Productos -->
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Cantidad</th>
+                            <th>Precio unitario</th>
+                            <th>Subtotal</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Club Colombia Dorada</td>
+                            <td>10</td>
+                            <td>$ 3.200</td>
+                            <td>$ 32.000</td>
+                            <td><button class="btn-delete">🗑️</button></td>
+                        </tr>
+                        <tr>
+                            <td>Águila Original</td>
+                            <td>20</td>
+                            <td>$ 2.800</td>
+                            <td>$ 56.000</td>
+                            <td><button class="btn-delete">🗑️</button></td>
+                        </tr>
+                        <tr>
+                            <td>Póker</td>
+                            <td>15</td>
+                            <td>$ 2.500</td>
+                            <td>$ 37.500</td>
+                            <td><button class="btn-delete">🗑️</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Barra de Resultados Monetarios -->
+            <div class="invoice-footer">
+                <div class="total-box">
+                    <div>Total a pagar:</div>
+                    <div><span>$ 125.500</span></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

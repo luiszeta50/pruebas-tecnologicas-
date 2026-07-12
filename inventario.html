@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bavaria S.A. - Inventario</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+    <!-- Barra de Navegación Lateral -->
+    <nav class="sidebar">
+        <div class="sidebar-brand">BAVARIA S.A.</div>
+        <ul class="sidebar-menu">
+              <li><a href="login.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="inventario.html">Inventario</a></li>
+          <li><a href="pedidos.html">Pedidos</a></li>
+          <li><a href="clientes.html">Clientes</a></li>
+          <li><a href="facturacion.html">Facturación</a></li>
+          <li><a href="reportes.html">Reportes</a></li>
+          <li><a href="index.html">Cerrar sesion</a></li>
+        </ul>
+    </nav>
+
+    <!-- Panel de Contenido Derecho -->
+    <main class="main-content">
+        <header class="topbar">
+            <div><strong>Sistema de Gestión</strong></div>
+            <div>Administrador 👤</div>
+        </header>
+
+        <section class="module-container">
+            <h1 class="module-title">Inventario</h1>
+
+            <!-- Pestañas de Filtrado y Control -->
+            <div class="toolbar">
+                <div class="inventory-tabs">
+                    <button class="tab-btn active">Entradas</button>
+                    <button class="tab-btn">Salidas</button>
+                    <button class="tab-btn">Stock actual</button>
+                </div>
+                <button class="btn-action-main">+ Nueva entrada</button>
+            </div>
+
+            <!-- Tabla de Datos -->
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Producto</th>
+                            <th>Cantidad</th>
+                            <th>Proveedor</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>20/05/2026</td>
+                            <td>Club Colombia Dorada</td>
+                            <td>150</td>
+                            <td>Pastón S.A.</td>
+                            <td><button class="btn-view">👁️</button></td>
+                        </tr>
+                        <tr>
+                            <td>20/05/2026</td>
+                            <td>Águila Original</td>
+                            <td>100</td>
+                            <td>Bebidas del Valle</td>
+                            <td><button class="btn-view">👁️</button></td>
+                        </tr>
+                        <tr>
+                            <td>19/05/2026</td>
+                            <td>Póker</td>
+                            <td>80</td>
+                            <td>Distribuidora XYZ</td>
+                            <td><button class="btn-view">👁️</button></td>
+                        </tr>
+                        <tr>
+                            <td>18/05/2026</td>
+                            <td>Costeña</td>
+                            <td>120</td>
+                            <td>Pastón S.A.</td>
+                            <td><button class="btn-view">👁️</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- Paginación -->
+                <div class="pagination">
+                    <button disabled>Anterior</button>
+                    <button class="active">1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button>Siguiente</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

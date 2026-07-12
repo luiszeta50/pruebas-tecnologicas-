@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bavaria S.A. - Clientes</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+    <!-- Menú de Navegación Lateral -->
+    <nav class="sidebar">
+        <div class="sidebar-brand">BAVARIA S.A.</div>
+        <ul class="sidebar-menu">
+             <li><a href="login.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="inventario.html">Inventario</a></li>
+          <li><a href="pedidos.html">Pedidos</a></li>
+          <li><a href="clientes.html">Clientes</a></li>
+          <li><a href="facturacion.html">Facturación</a></li>
+          <li><a href="reportes.html">Reportes</a></li>
+          <li><a href="index.html">Cerrar sesion</a></li>
+        </ul>
+    </nav>
+
+    <!-- Área de Contenido -->
+    <main class="main-content">
+        <header class="topbar">
+            <div><strong>Sistema de Gestión</strong></div>
+            <div>Administrador 👤</div>
+        </header>
+
+        <section class="module-container">
+            <h1 class="module-title">Clientes</h1>
+
+            <!-- Filtros de Control -->
+            <div class="toolbar">
+                <div class="search-box">
+                    <input type="text" placeholder="Buscar cliente...">
+                    <button class="btn-search">Buscar</button>
+                </div>
+                <button class="btn-add">+ Nuevo cliente</button>
+            </div>
+
+            <!-- Estructura de Datos de la Tabla -->
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Cliente</th>
+                            <th>Teléfono</th>
+                            <th>Ciudad</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>C001</td>
+                            <td>Supermercado La 14</td>
+                            <td>310 123 4567</td>
+                            <td>Bogotá</td>
+                            <td class="action-buttons">
+                                <button class="btn-action btn-edit">✏️</button>
+                                <button class="btn-action btn-delete">🗑️</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>C002</td>
+                            <td>Tiendas D1</td>
+                            <td>311 234 5678</td>
+                            <td>Medellín</td>
+                            <td class="action-buttons">
+                                <button class="btn-action btn-edit">✏️</button>
+                                <button class="btn-action btn-delete">🗑️</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>C003</td>
+                            <td>Éxito S.A.</td>
+                            <td>312 345 6789</td>
+                            <td>Cali</td>
+                            <td class="action-buttons">
+                                <button class="btn-action btn-edit">✏️</button>
+                                <button class="btn-action btn-delete">🗑️</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>C004</td>
+                            <td>Olímpica S.A.</td>
+                            <td>313 456 7890</td>
+                            <td>Barranquilla</td>
+                            <td class="action-buttons">
+                                <button class="btn-action btn-edit">✏️</button>
+                                <button class="btn-action btn-delete">🗑️</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>C005</td>
+                            <td>Carulla Vivero</td>
+                            <td>314 567 8901</td>
+                            <td>Bogotá</td>
+                            <td class="action-buttons">
+                                <button class="btn-action btn-edit">✏️</button>
+                                <button class="btn-action btn-delete">🗑️</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- Navegador de Páginas -->
+                <div class="pagination">
+                    <button disabled>Anterior</button>
+                    <button class="active">1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button>Siguiente</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
