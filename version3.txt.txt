@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Estudiantes</title>
+</head>
+<body>
+
+<h2>Riesgo Académico</h2>
+
+<script>
+    // Datos del estudiante
+    let nombre = "Monica";
+    let edad = 20;
+
+    // Notas
+    let nota1 = 4.0;
+    let nota2 = 3.5;
+    let nota3 = 4.5;
+
+    // Calcular promedio
+    let promedio = (nota1 + nota2 + nota3) / 3;
+
+    // Mostrar información
+    document.write("<h3>Información del Estudiante</h3>");
+    document.write("Nombre: " + nombre + "<br>");
+    document.write("Edad: " + edad + " años<br>");
+    document.write("Nota 1: " + nota1 + "<br>");
+    document.write("Nota 2: " + nota2 + "<br>");
+    document.write("Nota 3: " + nota3 + "<br>");
+    document.write("Promedio: " + promedio.toFixed(2) + "<br><br>");
+
+    // Verificar riesgo académico
+    if (promedio < 3.0) {
+        document.write("<b style='color:red;'>El estudiante " + nombre + " está en riesgo académico.</b>");
+    } else {
+        document.write("<b style='color:green;'>El estudiante " + nombre + " NO está en riesgo académico.</b>");
+    }
+</script>
+
+</body>
+</html>
